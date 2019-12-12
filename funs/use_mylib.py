@@ -1,3 +1,3 @@
-from mylib import math_funs
+from mylib import *
 
 print (math_funs.iseven(11))
