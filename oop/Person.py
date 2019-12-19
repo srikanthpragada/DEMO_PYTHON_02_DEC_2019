@@ -29,7 +29,7 @@ class Person:
             return "Old"
 
 
-p1 = Person("Abc", 130)
+p1 = Person("Abc", 30)
 print(p1.type)
 
 #
