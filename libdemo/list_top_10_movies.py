@@ -17,11 +17,9 @@ if movies is None or len(movies) == 0:
 
 for m in movies:
     title = m.find("a").text
-    # print(type(m))
-    # p = m.next_element    # Para that followed h3
-    # p = p.next_element
-    # print(type(p), p)
-    # runtime = p.find_all("span",class_="runtime")
-    # print(type(runtime))
-    print(f"{title:40}")
-
+    para = m.find_next("p")
+    div = m.find_next("div")
+    rating = div.find("span",class_="ipl-rating-star__rating").text
+    runtime = para.find("span",class_="runtime").text
+    genre = para.find("span", class_="genre").text.strip(' \n')
+    print(f"{title:40} - {runtime:10}  - {genre:30}  - {rating}")
